@@ -21,7 +21,8 @@ public class EventController {
 
     // 전체 조회 요청
     @GetMapping
-    public ResponseEntity<?> getList(String sort) {
+    public ResponseEntity<?> getList(
+            @RequestParam(required = false, defaultValue = "date") String sort) {
         List<Event> events = eventService.getEvents(sort);
         return ResponseEntity.ok().body(events);
     }
