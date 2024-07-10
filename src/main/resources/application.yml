@@ -3,6 +3,24 @@ server:
 
 # database setting
 spring:
+
+  # mail setting
+  mail:
+    host: smtp.naver.com
+    port: 465
+    username: hodolin24@naver.com
+    password: junglim00!
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+          starttls:
+            enable: true
+    default-encoding: UTF-8
+    debug: true
+
   datasource:
     url: jdbc:mariadb://localhost:3306/jpastudy
     username: root
@@ -25,3 +43,8 @@ logging:
     root: info
     com.study.event.api: debug
     org.hibernate.SQL: debug
+
+# email setting
+study:
+  mail:
+    host: hyelin1124@naver.com
