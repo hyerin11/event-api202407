@@ -1,5 +1,5 @@
 server:
-  port: 8282
+  port: 8686
 
 # database setting
 spring:
@@ -13,7 +13,7 @@ spring:
     database-platform: org.hibernate.dialect.MariaDB106Dialect
     hibernate:
       # ddl ??? ??? ????...
-      ddl-auto: update
+      ddl-auto: create
     properties:
       hibernate:
         format_sql: true # SQL ?? ??? ??? ??
@@ -23,14 +23,5 @@ spring:
 logging:
   level:
     root: info
-    com:
-      spring:
-        jpastudy: debug
-    org:
-      hibernate:
-        SQL: debug
-
-
-
-
-
+    com.study.event.api: debug
+    org.hibernate.SQL: debug
